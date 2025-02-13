@@ -1,40 +1,61 @@
 import '../App.css';
-import { getAllPosts } from '../services/posts/getAllPosts';
+import { getCounts } from '../services/posts/getCounts';
 import { useEffect, useState } from 'react';
-import Post from './Post';
+
 
 const Footer = () => {
 
       // Estado con la lista de post que recuperamos de la REST API
-  const [numeroEmpresas, setNumeroEmpresas] = useState({});
+  const [counts, setCounts] = useState({
+    numeroEmpresas: 0,
+    numeroProyectos: 0,
+    numeroAlumnos: 0,
+  });
 
 
-  function obtenerPosts(){
+  function obtenerCounts(){
 
       
-      getAllPosts().then(posts => {
-
+      getCounts({tabla: "empresas"}).then(valor => {
           
-          setNumeroEmpresas(posts);
-          console.log(posts);
+          setCounts(counts => ({
+            ...counts,
+            numeroEmpresas: valor.count,
+          }));
+          console.log(valor);
+        });   
+        
+        getCounts({tabla: "proyectos"}).then(valor => {
+          
+          setCounts(counts => ({
+            ...counts,
+            numeroProyectos: valor.count,
+          }));
+          console.log(valor);
+        });
 
-
-        });                    
+        getCounts({tabla: "users"}).then(valor => {
+          
+          setCounts(counts => ({
+            ...counts,
+            numeroAlumnos: valor.count,
+          }));
+          console.log(valor);
+        });
   }
 
   
-  useEffect(obtenerPosts, []);
+  useEffect(obtenerCounts, []);
 
   // Función encargada de llamar al componente Post con el post
   // que recibe como parámetro implícito de la función map
-  function muestraPost(post) {  
-
-    return <Post  post={post}></Post>;
-  }
+  
     return (
         <footer className='borde row'>
             <p>Footer</p>
-            <Post  post={numeroEmpresas.count}></Post>;
+            <h1>{counts.numeroEmpresas}</h1>
+            <h1>{counts.numeroProyectos}</h1>
+            <h1>{counts.numeroAlumnos}</h1>
    
 
         </footer>
