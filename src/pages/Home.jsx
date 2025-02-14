@@ -1,5 +1,5 @@
-import Cabecera from "../components/Cabecera";
-import Footer from "../components/Footer";
+import Cabecera from "../components/cabecera/Cabecera";
+import Footer from "../components/pie/Footer";
 import '../App.css' ;
 
 const Home = () => {

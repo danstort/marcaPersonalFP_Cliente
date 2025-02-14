@@ -1,5 +1,5 @@
-import '../App.css';
-import { getCounts } from '../services/posts/getCounts';
+import '../../App.css';
+import { getCounts } from '../../services/posts/getCounts';
 import { useEffect, useState } from 'react';
 
 
