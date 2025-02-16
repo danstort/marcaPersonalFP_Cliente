@@ -1,5 +1,6 @@
 import '../../App.css';
 import './Cabecera.css';
+import SelectorIdiomas from '../selectoridiomas/SelectorIdiomas';
 import imagenLogo from './img/mp-logoNaranja100.png';
 
 const Cabecera = () => {
@@ -9,6 +10,7 @@ return (
 
         <h1 className='col-12'>Cabecera</h1>
         <img src={imagenLogo} alt="Logo Naranja" className='imgLogoMarcaPersonal'/>
+        <SelectorIdiomas />
     </header>
     
 );

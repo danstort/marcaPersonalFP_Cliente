@@ -3,8 +3,14 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  --color1: #f59433;
+  --color2: #374f59;
+  --color3: #f8f9fb;
 }
 
+h1{
+  color: var(--color1);
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -45,3 +51,5 @@
 
   border: 1px solid black;
 }
+
+
