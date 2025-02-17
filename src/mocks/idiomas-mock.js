@@ -15,3 +15,5 @@ const idiomas = {
         }
     }
 }
+
+export default idiomas;

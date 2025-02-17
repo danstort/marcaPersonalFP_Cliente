@@ -20,7 +20,7 @@ const Cabecera = (props) => {
     //console.log(idioma);
 
     return (
-        <header className="borde row align-items-center">
+        <header className=" row align-items-center cabeceraFondo">
 
             <div className="col-4"><img src={imagenLogo} alt="Logo Naranja" className='imgLogoMarcaPersonal' /></div>
             <div className="col-4"><h2>MarcaPersonalFP</h2></div>
