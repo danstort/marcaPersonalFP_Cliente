@@ -1,6 +1,7 @@
 import Cabecera from "../../components/cabecera/Cabecera";
 import Footer from "../../components/pie/Footer";
-import '../../App.css' ;
+import '../../App.css';
+import './Home.css';
 import { useState } from 'react';
 
 const Home = (props) => {
@@ -16,13 +17,15 @@ const Home = (props) => {
         props.cambiarIdioma(idiomaElegido);
     }
 
-        //console.log(idioma+" Home");
+    //console.log(idioma+" Home");
     return (
         <>
-            <Cabecera cambiarIdioma={cambiarIdioma}/>
-            <h1>Home</h1>
+            <Cabecera cambiarIdioma={cambiarIdioma} />
+            <div className="row fondoHome"><h1>Home</h1></div>
             <Footer />
         </>
+
+
     );
 }
 

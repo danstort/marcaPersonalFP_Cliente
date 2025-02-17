@@ -1,6 +1,11 @@
-.fondoHome{
+.fondoHome {
 
-background-image: url('./img/mp-logoReves.png');
-  background-size: 50px 50px; /* Ajusta el tamaño de la imagen de fondo */
-  background-repeat: repeat; /* Ajusta la imagen para que cubra todo el fondo */
+    background-image: url('./img/mp-logoReves.png');
+    background-size: 20px 15px;
+    /* Ajusta el tamaño de la imagen de fondo */
+    background-repeat: repeat;
+    /* Ajusta la imagen para que cubra todo el fondo */
+    background-color: rgba(255, 255, 255, 0.8); /* Color blanco semitransparente */
+    background-blend-mode: lighten; /* Mezcla el color de fondo con la imagen */
+
 }

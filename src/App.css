@@ -11,6 +11,13 @@
 h2{
   color: var(--color1);
 }
+
+
+
+.sin{
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
