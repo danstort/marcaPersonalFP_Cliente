@@ -2,18 +2,32 @@ import '../../App.css';
 import './Cabecera.css';
 import SelectorIdiomas from '../selectoridiomas/SelectorIdiomas';
 import imagenLogo from './img/mp-logoNaranja100.png';
+import { useState } from 'react';
 
-const Cabecera = () => {
+const Cabecera = (props) => {
 
-return (
-    <header className="borde row">
+    const [idioma, setIdioma] = useState('es');
 
-        <h1 className='col-12'>Cabecera</h1>
-        <img src={imagenLogo} alt="Logo Naranja" className='imgLogoMarcaPersonal'/>
-        <SelectorIdiomas />
-    </header>
-    
-);
+    function cambiarIdioma(idiomaElegido) {
+        setIdioma(idiomaElegido);
+        mandarIdioma(idiomaElegido);
+    }
+
+    function mandarIdioma(idiomaElegido) {
+        props.cambiarIdioma(idiomaElegido);
+    } 
+
+    //console.log(idioma);
+
+    return (
+        <header className="borde row align-items-center">
+
+            <div className="col-4"><img src={imagenLogo} alt="Logo Naranja" className='imgLogoMarcaPersonal' /></div>
+            <div className="col-4"><h2>MarcaPersonalFP</h2></div>
+            <div className="col-4 text-end"><SelectorIdiomas cambiarIdioma={cambiarIdioma}/></div>
+
+        </header>
+    );
 
 }
 

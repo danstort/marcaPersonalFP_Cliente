@@ -7,6 +7,7 @@ import CentroEducativo from './pages/CentroEducativo'
 import Empresa from './pages/Empresa'
 import Alumno from './pages/Alumno'
 import { Routes, Route } from 'react-router-dom'
+import IdiomaContext from './context/IdiomaContext'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="container">
 
-
+      <IdiomaContext.Provider value="es">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/empresa" element={<Empresa/>} />
@@ -23,6 +24,7 @@ function App() {
         <Route path="/alumno" element={<Alumno />} />
 
       </Routes>
+      </IdiomaContext.Provider>
     </div>
       
       
