@@ -8,4 +8,42 @@
     background-color: rgba(255, 255, 255, 0.8); /* Color blanco semitransparente */
     background-blend-mode: lighten; /* Mezcla el color de fondo con la imagen */
 
+    padding: 9% 1% 9% 1%;
+}
+
+.imagenesHome {
+    width: 90%;
+    animation: imagenesHomeBack 0.5s forwards;
+}
+
+.imagenesHome:hover {
+    
+    animation: imagenesHome 0.5s forwards;
+
+}
+
+@keyframes imagenesHome {
+    0% {
+        transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(1.05);
+        border: 2px solid #ffffff;
+        border-radius: 4%;
+    }
+    
+}
+
+@keyframes imagenesHomeBack {
+    0% {
+        transform: scale(1.05);
+        border: 2px solid #ffffff;
+        border-radius: 4%;
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+    
 }
