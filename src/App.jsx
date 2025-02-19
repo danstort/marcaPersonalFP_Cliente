@@ -27,8 +27,8 @@ function App() {
       <IdiomaContext.Provider value={idioma}>
       <Routes>
         <Route path="/" element={<Home cambiarIdioma={cambiarIdioma}/>} />
-        <Route path="/empresa" element={<Empresa/>} />
-        <Route path="/centroeducativo" element={<CentroEducativo />} />
+        <Route path="/empresa" element={<Empresa cambiarIdioma={cambiarIdioma}/>} />
+        <Route path="/centroeducativo" element={<CentroEducativo cambiarIdioma={cambiarIdioma} />} />
         <Route path="/alumno" element={<Alumno cambiarIdioma={cambiarIdioma}/>} />
         <Route path="/empresa/alumno" element={<h1>En construcción</h1>} />
 

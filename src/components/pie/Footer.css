@@ -7,6 +7,11 @@
     font-size: 1em;
 }
 
+.numeroContador{
+    color: #f8f9fb;
+    font-size: 2em;
+}
+
 .fondoFooter{
     background-color: #374f59;
 }

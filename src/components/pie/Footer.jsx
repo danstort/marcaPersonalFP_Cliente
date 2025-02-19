@@ -20,25 +20,26 @@ const Footer = () => {
                 <div className='row'>
                     <div className='col-4'>
                         <p className='textoContador'>{idiomas[idioma].footer.empresas}</p>
-                        <h3>{counts.counts.numeroEmpresas}</h3>
+                        <h3 className='numeroContador'>{counts.counts.numeroEmpresas}</h3>
                         </div>
                     <div className='col-4'>
-                        <p>{idiomas[idioma].footer.proyectos}</p>
-                        <h3>{counts.counts.numeroProyectos}</h3>
+                        <p className='textoContador'>{idiomas[idioma].footer.proyectos}</p>
+                        <h3 className='numeroContador'>{counts.counts.numeroProyectos}</h3>
 
                     </div>
                     <div className='col-4'>
-                        <p>{idiomas[idioma].footer.alumnos}</p>
-                        <h3>{counts.counts.numeroAlumnos}</h3>
+                        <p className='textoContador'>{idiomas[idioma].footer.alumnos}</p>
+                        <h3 className='numeroContador'>{counts.counts.numeroAlumnos}</h3>
                     </div>
                 </div>
                 
                 
             </div>
             
-           <div className='col-12 '>
-                    <h1>Parte inferior footer</h1>
-                </div>
+           <div className='row '>
+                    <h1>CIFP Carlos III</h1>
+                    <p>C/ Carlos III, 30201 - Cartagena | 30019702@murciaeduca.es | 968321301</p>
+            </div>
 
         </footer>
     );
