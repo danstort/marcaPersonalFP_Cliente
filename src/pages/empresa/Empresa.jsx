@@ -4,6 +4,7 @@ import { useContext } from "react";
 import idiomas from "../../mocks/idiomas-mock";
 
 
+
 const Empresa = (props) => {
 
     const idioma = useContext(IdiomaContext);
@@ -20,6 +21,7 @@ const Empresa = (props) => {
     return(
         <>
             <Cabecera cambiarIdioma={cambiarIdioma}/>
+
             <h1>{idiomas[idioma].footer.empresas}</h1>
         </>
     )

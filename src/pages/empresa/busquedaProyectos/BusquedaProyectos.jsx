@@ -4,6 +4,7 @@ import IdiomaContext from '../../../context/IdiomaContext'
 import idiomas from '../../../mocks/idiomas-mock'
 import Empresa from '../Empresa'
 import MenuEmpresa from '../../../components/menuempresa/MenuEmpresa'
+import ListaFamiliasProfesionales from '../../../components/listaFamiliasProfesionales/ListaFamiliasProfesionales'
 
 const BusquedaProyectos = (props) => {
 
@@ -26,6 +27,8 @@ const BusquedaProyectos = (props) => {
             <h1>Busqueda Proyectos</h1>
             <MenuEmpresa />
             <h2>Prueba: {idiomas[idioma].footer.empresas}</h2>
+            <ListaFamiliasProfesionales />
+
         </>
     )
 }

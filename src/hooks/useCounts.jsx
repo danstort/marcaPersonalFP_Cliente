@@ -1,5 +1,5 @@
 import { useState, useEffect} from 'react';
-import { getCounts } from '../services/posts/getCounts';
+import { getCounts } from '../services/getCounts';
 
 const useCounts = () => {
 

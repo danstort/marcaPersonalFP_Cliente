@@ -1,6 +1,5 @@
 import '../../App.css';
 import './Footer.css';
-import { getCounts } from '../../services/posts/getCounts';
 import { useContext, useEffect, useState } from 'react';
 import useCounts from '../../hooks/useCounts';
 import idiomas from '../../mocks/idiomas-mock.js';
@@ -8,9 +7,11 @@ import IdiomaContext from '../../context/IdiomaContext';
 
 
 
+
 const Footer = () => {
 
   const counts = useCounts();
+  
 
   const idioma = useContext(IdiomaContext);
 
@@ -42,6 +43,8 @@ const Footer = () => {
                     <h1>CIFP Carlos III</h1>
                     <p>C/ Carlos III, 30201 - Cartagena | 30019702@murciaeduca.es | 968321301</p>
             </div>
+
+            
 
         </footer>
     );
