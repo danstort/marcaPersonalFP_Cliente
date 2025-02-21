@@ -10,10 +10,10 @@ import imagenAlumno from './img/alumno.jpg';
 
 const Home = (props) => {
 
-    const [idioma, setIdioma] = useState('es');
+    const [idioma, setIdioma] = useState();
 
     function cambiarIdioma(idiomaElegido) {
-        setIdioma(idiomaElegido);
+        setIdioma(idioma);
         mandarIdioma(idiomaElegido);
     }
 

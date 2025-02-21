@@ -6,23 +6,26 @@ const useCounts = () => {
 const [buscando, setBuscando] = useState(false);
 
 const [counts, setCounts] = useState({
-    numeroEmpresas: 0,
-    numeroProyectos: 0,
-    numeroAlumnos: 0,
+    numeroEmpresas: -1,
+    numeroProyectos: -1,
+    numeroAlumnos: -1,
   });
 
 
   function obtenerCounts(){
 
         setBuscando(true);
+        
       
       getCounts({tabla: "empresas"}).then(valor => {
           
           setCounts(counts => ({
             ...counts,
             numeroEmpresas: valor.count,
+            
           }));
           console.log(valor);
+          
         });   
         
         getCounts({tabla: "proyectos"}).then(valor => {
@@ -32,6 +35,7 @@ const [counts, setCounts] = useState({
             numeroProyectos: valor.count,
           }));
           console.log(valor);
+          
         });
 
         getCounts({tabla: "users"}).then(valor => {
@@ -41,15 +45,18 @@ const [counts, setCounts] = useState({
             numeroAlumnos: valor.count,
           }));
           console.log(valor);
-
-          setBuscando(false);
+          //setBuscando(false);
+          
+          
         });
+
+        
+        
+        
   }
 
   
   useEffect(obtenerCounts, []);
-
-
 
     return {buscando, counts};
 

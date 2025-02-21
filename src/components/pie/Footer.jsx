@@ -13,6 +13,8 @@ const Footer = () => {
   const counts = useCounts();
 
   const idioma = useContext(IdiomaContext);
+
+  console.log(counts.buscando);
   
     return (
         <footer className='borde row fondoFooter'>
