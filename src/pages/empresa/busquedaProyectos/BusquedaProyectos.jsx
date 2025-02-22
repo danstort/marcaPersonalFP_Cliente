@@ -25,7 +25,6 @@ const BusquedaProyectos = (props) => {
         <>
             <Empresa cambiarIdioma={cambiarIdioma} />
             <h1>Busqueda Proyectos</h1>
-            <MenuEmpresa />
             <h2>Prueba: {idiomas[idioma].footer.empresas}</h2>
             <ListaFamiliasProfesionales />
 

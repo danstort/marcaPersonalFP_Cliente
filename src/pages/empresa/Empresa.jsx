@@ -2,6 +2,7 @@ import Cabecera from "../../components/cabecera/Cabecera";
 import IdiomaContext from "../../context/IdiomaContext";
 import { useContext } from "react";
 import idiomas from "../../mocks/idiomas-mock";
+import MenuEmpresa from "../../components/menuempresa/MenuEmpresa";
 
 
 
@@ -21,7 +22,7 @@ const Empresa = (props) => {
     return(
         <>
             <Cabecera cambiarIdioma={cambiarIdioma}/>
-
+            <MenuEmpresa/>
             <h1>{idiomas[idioma].footer.empresas}</h1>
         </>
     )
