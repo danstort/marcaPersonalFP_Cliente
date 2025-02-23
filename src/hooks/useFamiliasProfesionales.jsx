@@ -8,7 +8,7 @@ const useFamiliasProfesionales = () => {
   const [familiasProfesionales, setFamiliasProfesionales] = useState([]);
 
 
-  function obtenerCounts() {
+  function obtenerFamiliasProfesionales() {
 
     setBuscando(true);
 
@@ -24,11 +24,11 @@ const useFamiliasProfesionales = () => {
   }
 
 
-  useEffect(obtenerCounts, []);
+  useEffect(obtenerFamiliasProfesionales, []);
 
   return { buscando, familiasProfesionales };
 
 
 }
 
-export default useFamiliasProfesionales
+export default useFamiliasProfesionales;

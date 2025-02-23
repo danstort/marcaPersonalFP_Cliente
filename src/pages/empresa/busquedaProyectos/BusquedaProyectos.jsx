@@ -3,12 +3,13 @@ import { useContext } from 'react'
 import IdiomaContext from '../../../context/IdiomaContext'  
 import idiomas from '../../../mocks/idiomas-mock'
 import Empresa from '../Empresa'
-import MenuEmpresa from '../../../components/menuempresa/MenuEmpresa'
 import ListaFamiliasProfesionales from '../../../components/listaFamiliasProfesionales/ListaFamiliasProfesionales'
+import ResultadosBusquedaProyectos from '../../../components/resultadosBusquedaProyectos/ResultadosBusquedaProyectos'
 
 const BusquedaProyectos = (props) => {
 
     const [idiomaElegido, setIdioma] = useState();
+    const [familiaID, setFamiliaID] = useState([]);
 
     function cambiarIdioma(idiomaElegido) {
         setIdioma(idiomaElegido);
@@ -19,6 +20,15 @@ const BusquedaProyectos = (props) => {
         props.cambiarIdioma(idiomaElegido);
     }
 
+    function establecerFamiliaID(familiaID) {
+        setFamiliaID(familiaID);
+        
+    }
+
+    
+
+    //console.log(familiaID);
+
 
     const idioma = useContext(IdiomaContext);
     return (
@@ -26,7 +36,10 @@ const BusquedaProyectos = (props) => {
             <Empresa cambiarIdioma={cambiarIdioma} />
             <h1>Busqueda Proyectos</h1>
             <h2>Prueba: {idiomas[idioma].footer.empresas}</h2>
-            <ListaFamiliasProfesionales />
+            <ListaFamiliasProfesionales establecerFamiliaID={establecerFamiliaID}/>
+            <ResultadosBusquedaProyectos familiaID={familiaID}/>
+
+
 
         </>
     )
