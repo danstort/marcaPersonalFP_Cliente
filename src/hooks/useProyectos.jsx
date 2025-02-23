@@ -14,7 +14,7 @@ const useProyectos = () => {
     setBuscando(true);
 
 
-    getProyectos.then(valor => {
+    getProyectos().then(valor => {
 
       setProyectos(valor);
       setBuscando(false);
