@@ -32,16 +32,19 @@ const BusquedaProyectos = (props) => {
 
     const idioma = useContext(IdiomaContext);
     return (
-        <>
+        <div className='row'>
             <Empresa cambiarIdioma={cambiarIdioma} />
-            <h1>Busqueda Proyectos</h1>
-            <h2>Prueba: {idiomas[idioma].footer.empresas}</h2>
+            <div className="col-12 text-start">
+                <h3>Busqueda Proyectos</h3>
+            </div>
+            
+            
             <ListaFamiliasProfesionales establecerFamiliaID={establecerFamiliaID}/>
             <ResultadosBusquedaProyectos familiaID={familiaID}/>
 
 
 
-        </>
+        </div>
     )
 }
 

@@ -1,24 +1,28 @@
 import useProyectos from "../../hooks/useProyectos";
+import ProyectoMinCard from "../proyectoMinCard/ProyectoMinCard";
+
 
 const ResultadosBusquedaProyectos = (props) => {
 
     const proyectos = useProyectos();
 
+    
     function mostrarProyectos(proyecto) {
-        return (
-            <div key={proyecto.id}>
-                <h1>{proyecto.nombre}</h1>
-                {proyecto.ciclos.map(ciclo => (
-                    <p key={ciclo.id}>{ciclo.familia_id}</p>
-                ))}
-            </div>
-        );
+        //La función some() comprueba si al menos un elemento de ciclos cumple con la condición que le pasamos.
+        //La función includes() comprueba si el array de FamiliaID
+        if (proyecto.ciclos.some(ciclo => props.familiaID.includes(ciclo.familia_id))) {
+            return (
+                <ProyectoMinCard key={proyecto.id} proyecto={proyecto}/>
+            );
+        }
+        return null;
     }
 
     return (
-        <div className="row">
-            <h1>{props.familiaID}</h1>
+        <div className="row ">
+            
             {proyectos.proyectos.map(mostrarProyectos)}
+
         </div>
     );
 

@@ -46,8 +46,11 @@ const ListaFamiliasProfesionales = (props) => {
 
 
     return (
-        <div>
-            <h1>Lista de familias profesionales</h1>
+        <div className="row sin pt-4">
+            <div className="col-12 text-start ">
+                <p>Filtra por familia profesional</p>
+            </div>
+            
             <ul>
                 {familiasProfesionales.familiasProfesionales.map(obtenerFamiliasProfesionales)}
             </ul>

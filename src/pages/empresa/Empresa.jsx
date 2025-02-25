@@ -20,11 +20,12 @@ const Empresa = (props) => {
     }
 
     return(
-        <>
+        <div className="row sin">
             <Cabecera cambiarIdioma={cambiarIdioma}/>
             <MenuEmpresa/>
-            <h1>{idiomas[idioma].footer.empresas}</h1>
-        </>
+            
+            
+        </div>
     )
 }
 

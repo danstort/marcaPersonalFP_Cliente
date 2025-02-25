@@ -21,7 +21,7 @@ const Cabecera = (props) => {
     //console.log(idioma);
 
     return (
-        <nav className=" row align-items-center cabeceraFondo">
+        <nav className=" row align-items-center cabeceraFondo sin">
 
             <div className="col-4 text-start sin">
                 <Link to="/"
