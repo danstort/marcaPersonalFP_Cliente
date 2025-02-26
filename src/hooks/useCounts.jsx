@@ -45,7 +45,7 @@ const [counts, setCounts] = useState({
             numeroAlumnos: valor.count,
           }));
           console.log(valor);
-          //setBuscando(false);
+          setBuscando(false);
           
           
         });

@@ -32,7 +32,7 @@ const Footer = () => {
                     </div>
                     <div className='col-4'>
                         <p className='textoContador'>{idiomas[idioma].footer.alumnos}</p>
-                        <h3 className='numeroContador'>{counts.counts.numeroAlumnos}</h3>
+                        <h3 className='numeroContador'>{counts.buscando ? <p>..cargando</p> : counts.counts.numeroAlumnos}</h3>
                     </div>
                 </div>
                 
