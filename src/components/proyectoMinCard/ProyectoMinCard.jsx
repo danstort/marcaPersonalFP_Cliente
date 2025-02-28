@@ -16,7 +16,7 @@ const ProyectoMinCard = (props) => {
       {/* Contenido de la tarjeta */}
       <div className="flex-grow-1 ms-3">
         <h5 className="mb-1">{props.proyecto.nombre}</h5>
-        <p className="small text-muted mb-1"> <strong>ALUMNOS: </strong> {props.proyecto.participantes.length}</p>
+        <p className="small text-muted mb-1"> <strong>ALUMNOS: </strong> {props.proyecto.participantes.map(participante => {return participante.name+" | "})}</p>
         <p className="mb-2"><strong>Tutor:</strong> {props.proyecto.docente_id} </p>
         <p className="mb-0"><strong>Ciclos:</strong> {props.proyecto.ciclos.map( ciclo => {
             return ciclo.codCiclo+" | ";
