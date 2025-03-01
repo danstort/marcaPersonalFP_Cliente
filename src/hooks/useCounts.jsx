@@ -6,9 +6,9 @@ const useCounts = () => {
 const [buscando, setBuscando] = useState(false);
 
 const [counts, setCounts] = useState({
-    numeroEmpresas: -1,
-    numeroProyectos: -1,
-    numeroAlumnos: -1,
+    numeroEmpresas: 0,
+    numeroProyectos: 0,
+    numeroAlumnos: 0,
   });
 
 

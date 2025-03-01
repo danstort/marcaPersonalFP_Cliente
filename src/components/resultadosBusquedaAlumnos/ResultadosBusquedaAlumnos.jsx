@@ -1,15 +1,15 @@
-import useProyectos from "../../hooks/useProyectos";
+import useAlumnos from "../../hooks/useAlumnos";
 import ProyectoMinCard from "../proyectoMinCard/ProyectoMinCard";
 import { useEffect, useState } from "react";
 
 
 const ResultadosBusquedaProyectos = (props) => {
 
-    const proyectos = useProyectos();
+    const alumnos = useAlumnos();
 
 
 
-    function mostrarProyectos(proyecto) {
+/*     function mostrarProyectos(proyecto) {
         //La función some() comprueba si al menos un elemento de ciclos cumple con la condición que le pasamos.
         //La función includes() comprueba si el array de FamiliaID
 
@@ -27,18 +27,15 @@ const ResultadosBusquedaProyectos = (props) => {
 
         }
 
-    }
+    } */
 
 
 
     return (
         <div className="row ">
 
-            {proyectos.proyectos.map(mostrarProyectos)}
-            {props.familiaID.length > 0 ? (
-                <p>No hay más proyectos que mostrar</p>
-            ) : null}
-
+            
+            {alumnos.alumnos.map(alumno => ( <h1>{alumno.name}</h1>))}
 
 
         </div>
