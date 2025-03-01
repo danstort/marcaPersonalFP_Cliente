@@ -37,7 +37,7 @@ const ListaCompetencias = (props) => {
     function obtenerCompetencias(competencia) {
 
         const botonSeleccionado = competenciasSeleccionadas.includes(competencia.nombre);
-        return <button style={{ backgroundColor: botonSeleccionado ? "blue" : "initial" }}
+        return <button className="botonFiltro m-1" style={{ backgroundColor: botonSeleccionado ? "blue" : "#d6d6d6", color: botonSeleccionado ? "white" : "black" }}
             key={competencia.id}
             onClick={() => añadirCompetencia(competencia.nombre, competencia.id)}>{competencia.nombre}</button>
         //Para llamar la función en onClick se hace con una arrow function para que no se ejecute en el momento de renderizar
@@ -46,12 +46,12 @@ const ListaCompetencias = (props) => {
 
 
     return (
-        <div className="row sin pt-4">
+        <div className="row sin pt-4 ">
             <div className="col-12 text-start ">
                 <p>Filtra por competencias</p>
             </div>
             
-            <ul>
+            <ul className="text-start">
                 {competencias.competencias.map(obtenerCompetencias)}
             </ul>
         </div>

@@ -22,7 +22,7 @@ function App() {
     //console.log("App: "+idioma);
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid ">
 
       <IdiomaContext.Provider value={idioma}>
       <Routes>

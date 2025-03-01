@@ -12,6 +12,18 @@ h2{
 }
 
 
+.fondoCard{
+  background-color: #f5f5f5;
+}
+
+.fondoInteriorCard{
+  background-color: #ffffff;
+  border-radius: 5%;
+}
+
+.botonFiltro{
+  background-color: #d6d6d6;
+}
 
 .sin{
   padding: 0 ;
