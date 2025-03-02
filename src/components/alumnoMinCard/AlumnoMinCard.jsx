@@ -1,4 +1,5 @@
 import React from "react";
+import avatar from "./img/avatar.svg";
 
 const AlumnoMinCard = ({ alumno }) => {
 
@@ -11,7 +12,7 @@ const AlumnoMinCard = ({ alumno }) => {
           <div className="row">
             <div className="col-3 sin" >
               <img
-                src={"https://www.svgrepo.com/svg/88702/avatar.svg"}
+                src={avatar}
                 alt={`Avatar de ${alumno.nombre}`}
                 className="img-fluid"
                 style={{ width: "100%", height: "auto", borderRadius: "10px", objectFit: "cover" }}

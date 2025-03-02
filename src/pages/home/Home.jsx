@@ -21,7 +21,7 @@ const Home = (props) => {
         props.cambiarIdioma(idiomaElegido);
     }
 
-    //console.log(idioma+" Home");
+    
     return (
         <>
             <Cabecera cambiarIdioma={cambiarIdioma} />
