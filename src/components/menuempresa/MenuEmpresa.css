@@ -15,26 +15,36 @@
   display: inline;
 }
 
-.menuEmpresa a {
+.menuEmpresa .empresaLink a{
   text-decoration: none;
-  color: gray;
-  font-size: 16px;
-  font-weight: normal;
+  color: orange;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-.menuEmpresa a:first-child {
+.menuEmpresa .empresaLink:first-child {
   color: orange;
   font-weight: bold;
 }
 
-.menuEmpresa a:first-child::before {
+.menuEmpresa .empresaLink:first-child::before {
   content: "[ ";
   color: orange;
   font-weight: bold;
 }
 
-.menuEmpresa a:first-child::after {
+.menuEmpresa .empresaLink:first-child::after {
   content: " ]";
   color: orange;
   font-weight: bold;
 }
+
+
+
+.menuEmpresa .restoLinks a{
+  text-decoration: none;
+  color: rgb(57, 57, 55);
+  font-size: 22px;
+  font-weight: normal;
+}
+

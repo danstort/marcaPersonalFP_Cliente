@@ -10,9 +10,9 @@ const MenuEmpresa = () => {
     return (
         <nav className='menuEmpresa'>
             <ul>
-                <li><Link to="/empresa" className="active">{idiomas[idioma].footer.empresas}</Link></li>
-                <li><Link to="/empresa/proyectos" className="active"> {idiomas[idioma].footer.proyectos} </Link></li>
-                <li><Link to="/empresa/alumnos" className="active"> {idiomas[idioma].footer.alumnos} </Link></li>
+                <li className='empresaLink'><Link to="/empresa" className="active">{idiomas[idioma].footer.empresas}</Link></li>
+                <li className='restoLinks'><Link to="/empresa/proyectos" className="active"> {idiomas[idioma].footer.proyectos} </Link></li>
+                <li className='restoLinks'><Link to="/empresa/alumnos" className="active"> {idiomas[idioma].footer.alumnos} </Link></li>
             </ul>
         </nav>
     );

@@ -34,8 +34,8 @@ const BusquedaProyectos = (props) => {
     return (
         <div className='row'>
             <Empresa cambiarIdioma={cambiarIdioma} />
-            <div className="col-12 text-start p-2" style={{backgroundColor: '#f8f9fb'}}>
-                <h5>Busqueda Proyectos</h5>
+            <div className="col-12 text-start p-3" style={{backgroundColor: '#f8f9fb'}}>
+                <h5 style={{fontWeight: 'bold'}}>Búsqueda Proyectos</h5>
             </div>
             
             
