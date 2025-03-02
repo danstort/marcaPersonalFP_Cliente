@@ -3,6 +3,10 @@ import React, { useState } from 'react'
 import ListaFamiliasProfesionales from '../../../components/listaFamiliasProfesionales/ListaFamiliasProfesionales'
 import ListaCompetencias from '../../../components/listaCompetencias/ListaCompetencias'
 import ResultadosBusquedaAlumnos from '../../../components/resultadosBusquedaAlumnos/ResultadosBusquedaAlumnos'
+import IdiomaContext from '../../../context/IdiomaContext'  
+import idiomas from '../../../mocks/idiomas-mock'
+import { useContext } from 'react'
+
 
 
 const BusquedaProyectos = (props) => {
@@ -29,12 +33,14 @@ const BusquedaProyectos = (props) => {
         console.log(competenciaID);
     }
 
+    const idioma = useContext(IdiomaContext);
+
     return (
         <div className='row'>
             <Empresa cambiarIdioma={cambiarIdioma} />
 
             <div className="col-12 text-start">
-                <h3>Busca a tus alumnos</h3>
+                <h3>{idiomas[idioma].pagAlumnos}</h3>
             </div>
             
             <ListaCompetencias establecerCompetenciaID={establecerCompetenciaID}/>

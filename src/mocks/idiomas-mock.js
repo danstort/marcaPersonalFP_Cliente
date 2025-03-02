@@ -6,7 +6,11 @@ const idiomas = {
             proyectos: "Proyectos",
             alumnos: "Alumnos",
         },
-        centroeducativo: "Centro Educativo"
+        centroeducativo: "Centro Educativo",
+        pagProyectos: "Búsqueda Proyectos",
+        pagAlumnos: "Busca a tus alumnos",
+        familiaProfesional: "Filtra por familia profesional",
+        competencia: "Filtra por competencia"
     }
     ,
     "en": {
@@ -15,7 +19,11 @@ const idiomas = {
             proyectos: "Projects",
             alumnos: "Students",
         },
-        centroeducativo: "Educational Center"
+        centroeducativo: "Educational Center",
+        pagProyectos: "Projects Search",
+        pagAlumnos: "Search for your students",
+        familiaProfesional: "Filter by professional family",
+        competencia: "Filter by competition"
     }
 }
 

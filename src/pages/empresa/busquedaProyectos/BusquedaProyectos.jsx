@@ -35,7 +35,7 @@ const BusquedaProyectos = (props) => {
         <div className='row'>
             <Empresa cambiarIdioma={cambiarIdioma} />
             <div className="col-12 text-start p-3" style={{backgroundColor: '#f8f9fb'}}>
-                <h5 style={{fontWeight: 'bold'}}>Búsqueda Proyectos</h5>
+                <h5 style={{fontWeight: 'bold'}}>{idiomas[idioma].pagProyectos}</h5>
             </div>
             
             

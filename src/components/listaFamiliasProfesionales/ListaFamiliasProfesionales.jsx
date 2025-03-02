@@ -1,6 +1,8 @@
 import useFamiliasProfesionales from "../../hooks/useFamiliasProfesionales";
 import { useState, useEffect } from "react";
-
+import IdiomaContext from '../../context/IdiomaContext'  
+import idiomas from '../../mocks/idiomas-mock'
+import { useContext } from 'react'
 
 
 const ListaFamiliasProfesionales = (props) => {
@@ -44,12 +46,12 @@ const ListaFamiliasProfesionales = (props) => {
         //Para llamar la función en onClick se hace con una arrow function para que no se ejecute en el momento de renderizar
     }
 
-
+    const idioma = useContext(IdiomaContext);
 
     return (
         <div className="row sin pt-4 text-start">
             <div className="col-12 text-start ">
-                <p>Filtra por familia profesional</p>
+                <p>{idiomas[idioma].familiaProfesional}</p>
             </div>
             
             <ul>

@@ -1,5 +1,8 @@
 import useCompetencias from "../../hooks/useCompetencias";
 import { useState, useEffect } from "react";
+import IdiomaContext from "../../context/IdiomaContext"; 
+import idiomas from "../../mocks/idiomas-mock";
+import { useContext } from 'react'
 
 
 const ListaCompetencias = (props) => {
@@ -43,12 +46,12 @@ const ListaCompetencias = (props) => {
         //Para llamar la función en onClick se hace con una arrow function para que no se ejecute en el momento de renderizar
     }
 
-
+    const idioma = useContext(IdiomaContext);
 
     return (
         <div className="row sin pt-4 ">
             <div className="col-12 text-start ">
-                <p>Filtra por competencias</p>
+                <p>{idiomas[idioma].competencia}</p>
             </div>
             
             <ul className="text-start">

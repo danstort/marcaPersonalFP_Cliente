@@ -1,5 +1,6 @@
 import React from "react";
 import avatar from "./img/avatar.svg";
+import banderas from "../../mocks/mock-banderas";
 
 const AlumnoMinCard = ({ alumno }) => {
 
@@ -31,10 +32,10 @@ const AlumnoMinCard = ({ alumno }) => {
                 {alumno.idiomas.map((idioma, index) => (
                   <div key={index} className="col-6 sin text-start">
                     { <img
-                        src={"https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"}
+                        src={banderas[idioma.alpha2.toUpperCase()].url}
                         alt={idioma.native_name}
                         title={idioma.native_name}
-                        style={{ width: "20px", height: "15px", marginRight: "5px" }}
+                        style={{ width: "30px", height: "25px", marginRight: "5px" }}
                       /> }
                     <p className="sin">{idioma.nivel}</p>
                     <p
